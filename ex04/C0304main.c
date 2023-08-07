@@ -1,52 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   C0304main.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pteh <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/06 16:51:05 by pteh              #+#    #+#             */
-/*   Updated: 2023/08/07 14:17:02 by pteh             ###   ########.fr       */
+/*   Created: 2023/08/06 16:38:45 by pteh              #+#    #+#             */
+/*   Updated: 2023/08/07 14:00:48 by pteh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include <string.h>
-#include <stdio.h>*/
 
-char	*find_substring(char *str, char *to_find)
-{
-	char	*found_subst;
+#include <string.h>
+#include <stdio.h>
 
-	while (*str)
-	{
-		if (*str == *to_find)
-		{
-			found_subst = str;
-			while ((*str == *to_find) && (*to_find != '\0'))
-			{
-				str++;
-				to_find++;
-			}
-			if (*to_find != '\0')
-				return (NULL);
-			return (found_subst);
-		}
-		else
-			str++;
-	}
-	return (NULL);
-}
-
-char	*ft_strstr(char *str, char *to_find)
-{
-	if (*to_find == '\0')
-		return (str);
-	else
-	{
-		return (find_substring(str, to_find));
-	}
-}
-/*
+char *ft_strncat(char *dest, char *src, unsigned int nb);
 int	main(void)
 {
 	char *a = "Hello World";
@@ -61,4 +29,5 @@ int	main(void)
 	printf("strstr(\"Hello World\", \"Word\": %s \n", strstr(a, c));
 	printf("strstr(\"Hello World\", \"\": %s \n", strstr(a, d));
 
-}*/
+}
+
