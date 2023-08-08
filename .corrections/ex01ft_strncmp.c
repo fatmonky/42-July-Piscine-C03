@@ -6,7 +6,7 @@
 /*   By: pteh <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/06 10:19:41 by pteh              #+#    #+#             */
-/*   Updated: 2023/08/08 10:08:20 by pteh             ###   ########.fr       */
+/*   Updated: 2023/08/08 10:31:22 by pteh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <unistd.h>
 #include <string.h>
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+unsigned int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
 	unsigned int	i;
 
@@ -29,7 +29,9 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 	}
 	else 
 	{
-		return ((unsigned char)s1[i] - (unsigned char)s2[i]); //this seems wrong: the return value should be int, including negative numbers. 
+		//printf("unsigned char %i\n", (unsigned char)s1[i]);
+		//printf("unsigned char %i\n", (unsigned char)s2[i]);
+		return (s1[i] - s2[i]); //this seems wrong: the return value should be int, including negative numbers. 
 	}
 }
 int	main(void)
