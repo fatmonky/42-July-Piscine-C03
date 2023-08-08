@@ -6,12 +6,12 @@
 /*   By: pteh <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/07 14:20:29 by pteh              #+#    #+#             */
-/*   Updated: 2023/08/08 14:37:26 by pteh             ###   ########.fr       */
+/*   Updated: 2023/08/08 18:49:19 by pteh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-/*
+
 #include <string.h>
-#include <stdio.h>*/
+#include <stdio.h>
 
 unsigned int	ft_strlen(char *str)
 {
@@ -40,7 +40,7 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 		return (size + ft_strlen(src));
 	else
 	{
-		while (i < (size - dest_len - 1))
+		while (i < (size - dest_len - 1)) //check also for src: to stop when src ends.
 		{
 			dest[dest_len + i] = src[i];
 			i++;
@@ -49,13 +49,13 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 	dest[size - 1] = '\0';
 	return (total_len);
 }
-/*
+
 int	main(void)
 {
 	char a[20] = "Hello";
 	char *b = "Wor";
 	char *d = "Worldly";
-	unsigned int c = 11;
+	unsigned int c = 110;
 	unsigned int e = 3;
 
 	printf("pre trans a: %s\n", a);
@@ -63,4 +63,4 @@ int	main(void)
 	printf("str(\"Hello\", \"Worldly\", 11): %d \n", ft_strlcat(a, d, c));
 	printf("str(\"Hello\", \"Wor\", 3): %d \n", ft_strlcat(a, b, e));
 	return(0);
-}*/
+}

@@ -6,7 +6,7 @@
 /*   By: pteh <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/06 16:51:05 by pteh              #+#    #+#             */
-/*   Updated: 2023/08/08 13:46:06 by pteh             ###   ########.fr       */
+/*   Updated: 2023/08/08 18:50:31 by pteh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /*
@@ -32,7 +32,7 @@ char	*find_substring(char *str, char *to_find)
 			if (*to_find == '\0')
 				return (found_subst);
 			else
-				return (NULL);
+				return (NULL); //but what if the found string is further down?
 		}
 		else
 			str++;
