@@ -6,12 +6,13 @@
 /*   By: pteh <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/06 16:51:05 by pteh              #+#    #+#             */
-/*   Updated: 2023/08/08 12:27:12 by pteh             ###   ########.fr       */
+/*   Updated: 2023/08/08 13:46:06 by pteh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /*
 #include <string.h>
 #include <stdio.h>*/
+#include <stddef.h>
 
 char	*find_substring(char *str, char *to_find)
 {
