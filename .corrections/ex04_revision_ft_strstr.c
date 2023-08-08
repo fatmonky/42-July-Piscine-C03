@@ -6,7 +6,7 @@
 /*   By: pteh <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/06 16:51:05 by pteh              #+#    #+#             */
-/*   Updated: 2023/08/08 19:52:46 by pteh             ###   ########.fr       */
+/*   Updated: 2023/08/08 19:34:55 by pteh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ char	*ft_strstr(char *str, char *to_find)
 		return (find_substring(str, to_find));
 	}
 }
-/*
+
 int	main(void)
 {
 	char *a = "Hello World";
@@ -69,5 +69,6 @@ int	main(void)
 	printf("strstr(\"Hello World\", \"Word\": %s \n", strstr(a, c));
 	printf("strstr(\"Hello World Word\", \"Word\": %s \n", strstr(e, c));
 	printf("strstr(\"Hello World\", \"\": %s \n", strstr(a, d));
+
 }
-*/
+
