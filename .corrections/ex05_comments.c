@@ -1,17 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ex05_comments.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pteh <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/07 14:20:29 by pteh              #+#    #+#             */
-/*   Updated: 2023/08/12 17:43:42 by pteh             ###   ########.fr       */
+/*   Updated: 2023/08/12 17:42:09 by pteh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-/*
+
 #include <string.h>
-#include <stdio.h>*/
+#include <stdio.h>
+
+//Loucille's code had a different definition of size:
 
 unsigned int	ft_strlen(char *str)
 {
@@ -29,14 +31,14 @@ unsigned int	ft_strlen(char *str)
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
 	unsigned int	total_len;
+	unsigned int	i; //tracking variable for dest.
 	unsigned int	dest_len;
-	unsigned int	i;
-	unsigned int	j;
+	unsigned int	j; //tracking variable added by Loucille. This is tracking position of src.
 
-	dest_len = ft_strlen(dest);
-	i = dest_len;
+	dest_len = ft_strlen(dest); //addition by Loucille
+	i = dest_len; //addition by Loucille
 	j = 0;
-	total_len = dest_len + ft_strlen(src);
+	total_len = ft_strlen(dest) + ft_strlen(src);
 	if (size <= dest_len)
 		return (size + ft_strlen(src));
 	else
@@ -45,7 +47,7 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 		{
 			dest[i] = src[j];
 			i++;
-			j++;
+			j++; //addition by Loucille
 		}
 	}
 	dest[i] = '\0';
